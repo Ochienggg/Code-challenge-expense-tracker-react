@@ -1,42 +1,176 @@
-#root {
-  max-width: 1280px;
+.app {
+  max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
+  color: #333;
+  background-color: orange;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
   text-align: center;
+  color: yellow; 
+  margin-bottom: 2rem;
+  border-bottom: 2px solid lavender;
+  padding-bottom: 0.5rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.search-sort {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background-color: palegreen;
+  padding: 1rem;
+  border-radius: 8px;
+  color: red;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.search-input {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #b0bec5; /* Medium grey */
+  flex-grow: 1;
+  max-width: 400px;
+  background-color: orangered;
+  color: black
+}
+
+.sort-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.sort-buttons button {
+  background-color: darkblue;
+  color: purple; 
+  border: 1px solid pink; 
+  padding: 0.5rem 1rem;
+}
+
+.sort-buttons button.active {
+  background-color: orange; 
+  color: white;
+  border-color: lightskyblue;
+}
+
+.content {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.expense-form {
+  background: darkseagreen;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  flex: 1;
+  min-width: 300px;
+  border: 1px solid yellowgreen;
+}
+
+.expense-form h2 {
+  margin-top: 0;
+  color: orchid; 
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: lightgreen;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid brown;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: orange;
+  color: black;
+}
+
+.expense-form button {
+  width: 100%;
+  background-color: darkorange;
+  color: white;
+  margin-top: 1rem;
+  transition: background-color 0.2s;
+}
+
+.expense-form button:hover {
+  background-color: greenyellow;
+}
+
+.expense-table {
+  flex: 2;
+  min-width: 300px;
+  color: black;
+}
+
+.expense-table h2 {
+  margin-top: 0;
+  color: peachpuff;
+  border-bottom: 2px solid yellow;
+  padding-bottom: 0.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: violet;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  color: black;
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid aquamarine;
+  color: black;
+}
+
+th {
+  background-color: purple; 
+  font-weight: 500;
+  color: green; 
+}
+
+.delete-btn {
+  background-color: red;
+  color: lightblue; 
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  border: 1px solid maroon;
+  transition: all 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: orange; 
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .search-sort {
+    flex-direction: column;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  
+  .search-input {
+    max-width: none;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
